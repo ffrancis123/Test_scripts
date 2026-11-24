@@ -1,0 +1,13 @@
+
+sudo usermod -aG docker $USER
+newgrp docker
+
+ 
+git clone https://github.com/qualcomm-linux/docker-pkg-build.git
+
+
+Debian : 
+./docker-pkg-build/docker_deb_build.py --distro trixie --source-dir /local/mnt/workspace/ffrancis/docker_local/audioreach-pal --output-dir ./debout-trixie/ --no-update-check --skip-gbp
+ 
+Ubuntu : 
+./docker-pkg-build/docker_deb_build.py --distro resolute --source-dir /local/mnt/workspace/phaniy/audioreach-pal/ --output-dir ./debout-resolute/ --no-update-check --skip-gbp
